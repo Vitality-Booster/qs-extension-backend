@@ -24,6 +24,9 @@ export async function getOverallWebsiteStats(userId: string): Promise<OverallWeb
                     $first: "$object.favIconUrl"
                 }
             }
+        },
+        {
+            $sort: { "length": -1 }
         }
     ])
 
