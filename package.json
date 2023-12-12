@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node index.js",
+    "start": "node index.ts",
     "dev": "nodemon src/index.ts"
   },
   "dependencies": {
+    "@types/cookie-parser": "^1.4.6",
     "bcrypt": "^5.1.1",
     "bcrypt-ts": "^4.0.1",
     "cookie-parser": "~1.4.4",
