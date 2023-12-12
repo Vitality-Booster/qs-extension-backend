@@ -3,6 +3,7 @@ import cookieParser from "cookie-parser";
 // import logger from "morgan";
 import usersRouter from "./routes/usersRouter"
 import statementsRouter from "./routes/statementsRouter";
+import statisticsRouter from "./routes/statisticsRouter";
 
 import {config} from "dotenv";
 import * as mongoose from "mongoose";
@@ -19,6 +20,7 @@ index.use(cookieParser(process.env.SECRET))
 
 index.use('/users', usersRouter);
 index.use('/statements', statementsRouter);
+index.use('/statistics', statisticsRouter);
 
 async function main(){
     await mongoose.connect(dbUrl)
